@@ -4,6 +4,7 @@
 let navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(item => {
   item.addEventListener('mouseover', event => {
+    event.preventDefault();
     event.target.style.transition = '.3s';
     event.target.style.fontSize = '2rem';
     event.target.style.borderBottom = '2px solid dodgerblue';
