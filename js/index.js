@@ -15,6 +15,32 @@ navLinks.forEach(item => {
   })
 });
 
+
+// use stopPropagation on two similar nested events
+let introContain = document.querySelector('.intro');
+introContain.addEventListener('click', event => {
+  event.target.style.backgroundColor = 'red';
+})
+
+let introH2 = document.querySelector('.intro').querySelector('h2');
+introH2.addEventListener('click', event => {
+  event.stopPropagation();
+  event.target.style.backgroundColor = 'dodgerblue';
+})
+introH2.addEventListener('dblclick', event => {
+  event.target.style.backgroundColor = '#fff';
+})
+
+let introP = document.querySelector('.intro').querySelector('p');
+introP.addEventListener('click', event => {
+  event.stopPropagation();
+  event.target.style.backgroundColor = 'green';
+})
+introP.addEventListener('dblclick', event => {
+  event.target.style.backgroundColor = '#fff';
+})
+
+
 // add event listener to destination buttons at bottom of page
 let destBtn = document.querySelectorAll('.btn');
 destBtn.forEach(item => {
