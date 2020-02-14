@@ -26,18 +26,22 @@ let introH2 = document.querySelector('.intro').querySelector('h2');
 introH2.addEventListener('click', event => {
   event.stopPropagation();
   event.target.style.backgroundColor = 'dodgerblue';
+  event.target.style.color = '#fff';
 })
 introH2.addEventListener('dblclick', event => {
   event.target.style.backgroundColor = '#fff';
+  event.target.style.color = '#000';
 })
 
 let introP = document.querySelector('.intro').querySelector('p');
 introP.addEventListener('click', event => {
   event.stopPropagation();
-  event.target.style.backgroundColor = 'green';
+  event.target.style.backgroundColor = 'dodgerblue';
+  event.target.style.color = '#fff';
 })
 introP.addEventListener('dblclick', event => {
   event.target.style.backgroundColor = '#fff';
+  event.target.style.color = '#000';
 })
 
 
@@ -47,9 +51,11 @@ destBtn.forEach(item => {
   item.addEventListener('mouseover', event => {
     event.target.style.transition = '.3s';
     event.target.style.fontSize = '2.2rem';
+    event.target.style.border = '2px solid #17a2b8';
   })
   item.addEventListener('mouseleave', event => {
     event.target.style.fontSize = '1.8rem';
+    event.target.style.border = '1px solid #c0c0c0';
   })
 })
 
